@@ -114,6 +114,12 @@ public class UpdateUserUI extends javax.swing.JFrame {
         endereçoLabel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         endereçoLabel.setText("Endereço");
 
+        endereçoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                endereçoTextFieldActionPerformed(evt);
+            }
+        });
+
         nomeLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         nomeLabel1.setText("Sobrenome:");
 
@@ -295,7 +301,7 @@ public class UpdateUserUI extends javax.swing.JFrame {
                 pst.setString(2, nomeTextField.getText());
                 pst.setString(3, sobrenomeTextField.getText());
                 pst.setString(4, emailTextField.getText());
-                pst.setInt(5, address);
+                pst.setInt(5, Integer.parseInt(endereçoTextField.getText()));
                 pst.setInt(6, 1);
                 pst.setInt(7, cid);
                 pst.execute();
@@ -318,6 +324,10 @@ public class UpdateUserUI extends javax.swing.JFrame {
     private void ativoNaoRadioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ativoNaoRadioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ativoNaoRadioActionPerformed
+
+    private void endereçoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_endereçoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_endereçoTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
